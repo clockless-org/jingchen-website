@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "rm -rf dist && mkdir -p dist && cp -R index.html styles.css script.js assets dist/",
+    "build": "rm -rf dist && mkdir -p dist && cp -R index.html styles.css education.css script.js assets education dist/",
     "preview": "vite preview --host 127.0.0.1"
   },
   "devDependencies": { "vite": "^6.0.0" }
