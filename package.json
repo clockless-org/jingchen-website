@@ -1,0 +1,12 @@
+{
+  "name": "jingchen-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "rm -rf dist && mkdir -p dist && cp -R index.html styles.css script.js assets dist/",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "devDependencies": { "vite": "^6.0.0" }
+}
