@@ -15,11 +15,13 @@
   --ink-04: rgba(20, 19, 14, 0.045);
   --ink-03: rgba(20, 19, 14, 0.03);
   --muted: #535347;
-  /* Primary accent is a calm fresh green pill (#779A58 in the shot);
-     blue is secondary. The legacy --green name maps to the new primary. */
-  --green: #6f9551;
-  --green-bright: #84ad65;
-  --green-wash: rgba(111, 149, 81, 0.10);
+  /* Primary accent is a fresh-but-grounded green pill — darkened from the
+     #779A58 in the Dribbble shot to #5a7c40 so white text on the pill
+     clears WCAG AA (4.78:1, was 3.45:1 at the lighter tint). The lighter
+     bright tone stays available for hover/wash. */
+  --green: #5a7c40;
+  --green-bright: #6f9551;
+  --green-wash: rgba(90, 124, 64, 0.10);
   --blue: #739dcd;
   --blue-soft: #afc9e1;
   --blue-wash: rgba(115, 157, 205, 0.12);
@@ -411,7 +413,7 @@ h3 { font-weight: 600; }
 
 /* language toggle */
 .lang-toggle { display: inline-flex; border: 1px solid var(--ink-40); border-radius: 2px; overflow: hidden; margin-left: 6px; }
-.lang-toggle button { background: transparent; border: 0; padding: 8px 12px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; }
+.lang-toggle button { background: transparent; border: 0; padding: 10px 14px; min-height: 44px; min-width: 44px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; border-radius: var(--pill); }
 .lang-toggle button.active { background: var(--green); color: #fff; }
 /* bilingual visibility: body[data-lang] controls which language shows */
 body[data-lang="zh"] .en { display: none; }
