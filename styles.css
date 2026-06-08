@@ -1,33 +1,37 @@
 :root {
-  /* Sotheby's-style luxury real estate: deep navy + gold accent + warm white. */
-  --cream: #faf8f3;
+  /* Zenspace.arch aesthetic — cool soft-blue canvas, near-black ink,
+     fresh green pill accent. Calm tech-modern, in conscious contrast to
+     stephensun's warm bronze + cream luxury craftsman look. */
+  --cream: #eaf2f7;
   --cream-soft: #ffffff;
-  --line: #e7e2d7;
-  --line-soft: #efeae0;
-  --ink: #122036;
-  --ink-83: rgba(18, 32, 54, 0.88);
-  --ink-82: rgba(18, 32, 54, 0.84);
-  --ink-55: rgba(18, 32, 54, 0.56);
-  --ink-40: rgba(18, 32, 54, 0.36);
-  --ink-08: rgba(18, 32, 54, 0.08);
-  --ink-04: rgba(18, 32, 54, 0.045);
-  --ink-03: rgba(18, 32, 54, 0.03);
-  --muted: #5a6172;
-  /* "green" var kept for reuse = primary deep navy; gold is the accent. */
-  --green: #0a1f44;
-  --green-bright: #16315f;
-  --green-wash: rgba(10, 31, 68, 0.05);
-  --navy: #0a1f44;
-  --blue: #0a1f44;
-  --gold: #9a7b3f;
-  --gold-soft: rgba(154, 123, 63, 0.1);
-  --button-inset: 0 1px 0 rgba(255, 255, 255, 0.18) inset, 0 1px 2px rgba(21, 32, 27, 0.12);
-  --shadow-sm: 0 1px 2px rgba(21, 32, 27, 0.04), 0 1px 0 rgba(21, 32, 27, 0.02);
-  --shadow: 0 18px 44px -22px rgba(21, 32, 27, 0.28), 0 2px 8px rgba(21, 32, 27, 0.05);
-  --shadow-lg: 0 40px 90px -40px rgba(21, 32, 27, 0.38), 0 8px 24px rgba(21, 32, 27, 0.06);
-  --focus: 0 18px 44px -22px rgba(21, 32, 27, 0.3);
-  --radius-card: 16px;
-  --radius-container: 22px;
+  --line: #cfdae3;
+  --line-soft: #e2eaf0;
+  --ink: #14130e;
+  --ink-83: rgba(20, 19, 14, 0.88);
+  --ink-82: rgba(20, 19, 14, 0.84);
+  --ink-55: rgba(20, 19, 14, 0.56);
+  --ink-40: rgba(20, 19, 14, 0.36);
+  --ink-08: rgba(20, 19, 14, 0.08);
+  --ink-04: rgba(20, 19, 14, 0.045);
+  --ink-03: rgba(20, 19, 14, 0.03);
+  --muted: #535347;
+  /* Primary accent is a calm fresh green pill (#779A58 in the shot);
+     blue is secondary. The legacy --green name maps to the new primary. */
+  --green: #6f9551;
+  --green-bright: #84ad65;
+  --green-wash: rgba(111, 149, 81, 0.10);
+  --blue: #739dcd;
+  --blue-soft: #afc9e1;
+  --blue-wash: rgba(115, 157, 205, 0.12);
+  --gold: #14130e;
+  --gold-soft: rgba(20, 19, 14, 0.08);
+  --button-inset: 0 1px 0 rgba(255, 255, 255, 0.22) inset, 0 1px 2px rgba(20, 19, 14, 0.08);
+  --shadow-sm: 0 1px 2px rgba(20, 19, 14, 0.04), 0 1px 0 rgba(20, 19, 14, 0.02);
+  --shadow: 0 24px 48px -28px rgba(20, 19, 14, 0.22), 0 4px 12px rgba(20, 19, 14, 0.05);
+  --shadow-lg: 0 48px 96px -40px rgba(20, 19, 14, 0.30), 0 12px 28px rgba(20, 19, 14, 0.06);
+  --focus: 0 0 0 4px rgba(111, 149, 81, 0.24);
+  --radius-card: 22px;
+  --radius-container: 28px;
   --pill: 9999px;
   color-scheme: light;
 }
@@ -38,8 +42,8 @@ body {
   margin: 0;
   font-family: "Manrope", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   background:
-    radial-gradient(circle at 92% -8%, rgba(45, 110, 163, 0.12), transparent 34rem),
-    radial-gradient(circle at 2% 2%, rgba(17, 33, 46, 0.05), transparent 30rem),
+    radial-gradient(circle at 88% -6%, rgba(175, 201, 225, 0.45), transparent 36rem),
+    radial-gradient(circle at 4% 8%, rgba(175, 201, 225, 0.32), transparent 30rem),
     var(--cream);
   color: var(--ink);
   min-height: 100vh;
@@ -50,7 +54,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: linear-gradient(rgba(21, 32, 27, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(21, 32, 27, 0.02) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(20, 19, 14, 0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(20, 19, 14, 0.018) 1px, transparent 1px);
   background-size: 88px 88px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 60%);
 }
@@ -60,7 +64,7 @@ img { display: block; max-width: 100%; }
 button, input { font: inherit; }
 
 /* Serif display accent (premium editorial touch in headlines). */
-.ser { font-family: "Noto Serif SC", "Songti SC", "Newsreader", Georgia, serif; font-style: normal; font-weight: 600; color: var(--green); }
+.ser { font-family: "Cormorant Garamond", "Noto Serif SC", "Songti SC", Georgia, serif; font-style: italic; font-weight: 500; color: var(--green); }
 
 .page-shell { width: min(100%, 1320px); margin: 0 auto; overflow: clip; padding: 0 8px; }
 .site-header {
@@ -382,7 +386,8 @@ h3 { font-weight: 600; }
 .section-header .eyebrow, .edu-cta .eyebrow { margin-bottom: 18px; }
 
 /* Gold serif accent word (upright — fake-italic on CJK looks wrong) */
-.ser { color: var(--gold); font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-style: normal; font-weight: 600; }
+/* zenspace italic-serif accent — same rules across breakpoints */
+.ser { color: var(--green); font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-style: italic; font-weight: 500; }
 
 /* Sharp, editorial radii + refined navy buttons */
 .header-cta, .btn, .btn-primary, .btn-secondary { border-radius: 2px; letter-spacing: 0.4px; }
@@ -645,3 +650,130 @@ a.cm-value:hover { color: var(--green); }
 .city-pin-core circle { fill: #c0552a; r: 9; stroke: #fff; stroke-width: 2.5; }
 .city-pin-core:hover circle, .city-pin-core:focus-visible circle, .city-pin-core.is-active circle { fill: #2f8f5b; r: 11; }
 .city-pin-core text { font-weight: 700; font-size: 13.5px; fill: var(--ink); }
+
+/* ─────────────────────────────────────────────────────────────
+   Zenspace.arch palette overlay — extra patterns on top of the
+   shared base styles. Calm cool-blue canvas, fresh green pill
+   accents, generous rounded card-on-card composition.
+   ───────────────────────────────────────────────────────────── */
+
+/* Brand mark JC monogram — repaint to the cooler ink color */
+.brand-mark { box-shadow: 0 1px 0 rgba(20,19,14,.05), 0 6px 16px rgba(20,19,14,.10); }
+
+/* Header pill chips */
+.lang-toggle { background: rgba(255,255,255,.65); border: 1px solid var(--line); border-radius: var(--pill); padding: 4px; }
+.lang-toggle button.active { background: var(--ink); color: #fff; }
+
+/* Hero: card-on-card composition. Photo sits inside a large rounded
+   container with the headline overlaid on the upper portion. */
+.re-hero { padding: 36px 24px 24px; max-width: 1380px; margin: 0 auto; }
+.re-hero .hero-bg { border-radius: 32px; overflow: hidden; box-shadow: var(--shadow); }
+.re-hero .hero-bg img { filter: saturate(1.02) brightness(.92); transform: none; transition: transform 12s ease; }
+.re-hero .hero-bg::after { background: linear-gradient(180deg, rgba(20,19,14,.45) 0%, rgba(20,19,14,.25) 38%, rgba(20,19,14,.55) 100%); }
+.re-hero .hero-grid { padding: 56px 56px 44px; gap: 44px; }
+.re-hero h1 { font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-weight: 500; letter-spacing: -1.5px; line-height: 1.04; }
+.re-hero h1 .ser { font-style: italic; color: var(--blue-soft); }
+.re-hero .hero-actions .btn-primary { background: var(--green); color: #fff; box-shadow: 0 1px 0 rgba(255,255,255,.18) inset; }
+.re-hero .hero-actions .btn-primary:hover { background: var(--green-bright); }
+.re-hero .hero-actions .btn-secondary { background: rgba(255,255,255,.85); border-color: rgba(20,19,14,.15); color: var(--ink); }
+.re-hero .hero-actions .btn-secondary:hover { background: #fff; border-color: var(--green); color: var(--green); }
+.re-hero .eyebrow.on-dark { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.32); }
+
+/* Hero stats: tighter, more "data block" feel */
+.hero-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  padding: 22px 0 0; border-top: 1px solid rgba(255,255,255,.18);
+}
+.hero-stats strong { font-family: "Cormorant Garamond", serif; font-size: 44px; font-weight: 500; letter-spacing: -1.2px; }
+.hero-stats span { color: rgba(255,255,255,.78); font-size: 12.5px; letter-spacing: .3px; }
+
+/* Agent card sits as floating tile on the hero photo */
+.agent-card { background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.7); border-radius: var(--radius-container); padding: 22px; box-shadow: var(--shadow); }
+.agent-card img { border-radius: 16px; }
+.ac-chips li { background: var(--blue-wash); border-color: rgba(115,157,205,.32); color: var(--ink); }
+.ac-call { background: var(--ink); color: #fff; border-radius: var(--pill); padding: 10px 16px; }
+.ac-call:hover { background: var(--green); }
+
+/* Project / module / service cards: green pill kicker treatment */
+.service-card { border-radius: var(--radius-container); padding: 28px; }
+.service-card .icon { background: var(--green-wash); color: var(--green); }
+.service-num {
+  display: inline-block; padding: 4px 12px; border-radius: var(--pill);
+  background: var(--green); color: #fff; font-family: "Manrope", sans-serif;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .6px;
+  text-transform: uppercase; width: max-content;
+}
+
+/* Module / guide cards: scoped to a soft pill at top-left of the photo */
+.module-card { border-radius: var(--radius-container); }
+.module-card img { border-radius: var(--radius-container) var(--radius-container) 0 0; border-bottom: 0; height: 220px; }
+.module-card > div span:first-child {
+  display: inline-block; padding: 5px 14px; border-radius: var(--pill);
+  background: var(--green); color: #fff; font-family: "Manrope", sans-serif;
+  font-style: normal; font-size: 11.5px; font-weight: 700; letter-spacing: .6px;
+  text-transform: uppercase;
+}
+.card-play { background: rgba(255,255,255,.92); color: var(--ink); }
+
+/* Brand strip: soft blue card with the about photo set in a rounded
+   tile, headline in calm italic Cormorant */
+.brand-strip { background: linear-gradient(180deg, #f4f8fb 0%, var(--cream) 100%); border-radius: var(--radius-container); margin: 8px 24px; padding: 60px 56px; border-top: 0; border-bottom: 0; box-shadow: var(--shadow-sm); max-width: 1380px; margin-left: auto; margin-right: auto; }
+.brand-strip-image { border-radius: 28px; box-shadow: var(--shadow); }
+.brand-strip-copy h2 { font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-weight: 500; letter-spacing: -1.4px; }
+
+/* Map card-on-card */
+.regions-map { border-radius: var(--radius-container); background: linear-gradient(180deg, #ffffff, #f5f9fc); border-color: var(--line); }
+.bay-map rect:first-of-type { fill: var(--blue-soft) !important; opacity: .55; }
+.city-card { border-radius: var(--radius-container); background: var(--cream-soft); }
+.city-pin circle { fill: var(--ink); }
+.city-pin:hover circle, .city-pin:focus-visible circle, .city-pin.is-active circle { fill: var(--green); }
+.city-pin-core circle { fill: var(--green); }
+.city-pin-core:hover circle, .city-pin-core:focus-visible circle, .city-pin-core.is-active circle { fill: var(--ink); }
+
+/* Contact form: cleaner inputs with green focus ring */
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { box-shadow: 0 0 0 3px var(--green-wash); border-color: var(--green); }
+
+/* Buttons: pill-shaped */
+.btn { border-radius: var(--pill); }
+.header-cta { border-radius: var(--pill); background: var(--ink); }
+.header-cta:hover { background: var(--green); }
+.btn-primary { background: var(--ink); }
+.btn-primary:hover { background: var(--green); transform: translateY(-1px); }
+
+/* Section headlines */
+.section-header h2, .cost-card h2, .about-copy h2 { font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-weight: 500; letter-spacing: -1.2px; line-height: 1.06; }
+
+/* Big outline wordmark — the Zenspace signature footer flourish */
+.brand-flourish {
+  position: relative; padding: 80px 24px 0; max-width: 1380px;
+  margin: 0 auto; text-align: center; overflow: hidden;
+}
+.brand-flourish-img {
+  width: 100%; max-height: 360px; object-fit: cover; border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+.brand-flourish-mark {
+  position: relative; margin-top: -38px;
+  font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+  font-weight: 500; font-size: clamp(48px, 9.4vw, 158px);
+  line-height: .9; letter-spacing: -3px;
+  -webkit-text-stroke: 1.5px var(--ink);
+  color: transparent;
+  text-shadow: 0 1px 0 rgba(255,255,255,.6);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.brand-flourish-tag {
+  position: relative; margin-top: 12px;
+  font-family: "Manrope", sans-serif; font-size: 13px;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .re-hero { padding: 18px 14px; }
+  .re-hero .hero-grid { padding: 32px 24px; }
+  .brand-strip { margin: 8px 14px; padding: 36px 22px; }
+  .brand-flourish { padding: 40px 14px 0; }
+  .brand-flourish-mark { margin-top: -16px; -webkit-text-stroke: 1px var(--ink); }
+}
